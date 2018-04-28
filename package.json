@@ -4,7 +4,8 @@
   "description": "This project was completed as a part of The Web Developer Bootcamp course on Udemy.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Ayman Salah",
   "license": "ISC",

@@ -15,10 +15,10 @@ var campgroundRoutes = require("./routes/campgrounds"),
     commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index");
 
-const PORT = 3000;
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 
 // connecting to the DB
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect(url);
 
 //require moment
 app.locals.moment = require('moment');
@@ -60,6 +60,6 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(PORT, function() {
-  console.log("YelpCamp server is listening to port " + PORT);
+app.listen(process.env.PORT, process.env.IP, function() {
+  console.log("YelpCamp server is started!");
 });
