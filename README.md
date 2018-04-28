@@ -18,5 +18,5 @@ Hosted on Heroku services and MongoLab: [link](https://rocky-springs-67960.herok
 * NodeJS
 * Express
 * MongoDB
-* PassportJS for authentication
+* NPM
 
